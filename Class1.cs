@@ -91,7 +91,7 @@ namespace ChildrensDayPlugin
                             if (IsPlayerDNTEnabled(player))
                             {
                                 // 如果开启DNT，显示红色提示信息
-                                string dntText = $"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<size=16><color=#00FFFF>玩家: {player.Nickname}</color> | <color=#FFFF00>分数: 0</color> | <color=#00FF00>Tickrate: 60</color> | <color=#FF0000>[DNT] 已开启数据不追踪模式</color> | <color=#ADD8E6>角色: {roleName}</color></size>";
+                                string dntText = $"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<size=16><color=#00FFFF>玩家: {player.Nickname}</color> | <color=#FFFF00>分数: 0</color> | <color=#00FF00>Tickrate: 60</color> | <color=#FF0000>[DNT] 已开启数据不追踪模式</color> | <color=#ADD8E6>角色: {roleName}</color></size>";
                                 try
                                 {
                                     player.ShowHint(dntText, (ushort)(500 + 200));
@@ -104,7 +104,7 @@ namespace ChildrensDayPlugin
                             }
                             
                             var data = DataManager.GetPlayerData(player);
-                            string hintText = $"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<size=16><color=#00FFFF>玩家: {player.Nickname}</color> | <color=#FFFF00>分数: 0</color> | <color=#00FF00>Tickrate: 60</color> | 等级: {data.Level} | <color=#FFFF00>经验: {data.Experience}/{data.RequiredExperience}</color> | <color=#FFA500>{data.Title}</color> | <color=#ADD8E6>角色: {roleName}</color></size>";
+                            string hintText = $"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<size=16><color=#00FFFF>玩家: {player.Nickname}</color> | <color=#FFFF00>分数: 0</color> | <color=#00FF00>Tickrate: 60</color> | 等级: {data.Level} | <color=#FFFF00>经验: {data.Experience}/{data.RequiredExperience}</color> | <color=#FFA500>{data.Title}</color> | <color=#ADD8E6>角色: {roleName}</color></size>";
                             
                             try
                             {
