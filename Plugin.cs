@@ -7,6 +7,7 @@ using Exiled.API.Features;
 using Exiled.Events.EventArgs.Player;
 using Exiled.Events.EventArgs.Server;
 using Exiled.API.Enums;
+using PlayerRoles;
 using MEC;
 
 namespace ChildrensDayPlugin
@@ -68,7 +69,11 @@ namespace ChildrensDayPlugin
         
         private void OnPlayerEscaping(EscapingEventArgs ev)
         {
-            DataManager.AddExperience(ev.Player, 25);
+            // 只有D级人员和科学家在逃脱时才能获得经验
+            if (ev.Player.Role.Type == RoleTypeId.ClassD || ev.Player.Role.Type == RoleTypeId.Scientist)
+            {
+                DataManager.AddExperience(ev.Player, 25);
+            }
         }
         
         private void OnRoundStarted()
